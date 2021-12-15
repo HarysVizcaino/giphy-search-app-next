@@ -13,10 +13,12 @@ export default function Home(initialData) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css"/>
       </Head>
-
       <h1>Giphy Search App</h1>
-      {
-        initialData.catGiphys.data.map((each, index) => {
+      <form>
+        <input type="text" />
+      </form>
+      <div className="giphy-search-results-grid">
+      { initialData.catGiphys.data.map((each, index) => {
           return (
             <div key="index">
               <h3>{each.title}</h3>
@@ -25,6 +27,7 @@ export default function Home(initialData) {
           )
         })
       }
+      </div>
     </div>
   )
 }
