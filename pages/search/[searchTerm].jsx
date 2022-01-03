@@ -9,10 +9,11 @@ export default function Search (initialData){
         <>
         <div className='container'>
         <Head>
-                <title>Search</title>
-                <link rel="icon" href="/favicon.ico" />
-                <link rel="stylesheet" href="/styles.css"/>
-            </Head>
+            <title>Search results for: {router.query.searchTerm}</title>
+            <meta name="description" content={initialData.giphys.map((each, index) => each.title + ' ')}></meta>
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="stylesheet" href="/styles.css"/>
+        </Head>
             <p>Go <Link href="/"><a>home</a></Link></p>
             <h1>Search results for: {router.query.searchTerm}</h1>
 
